@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="p-10 bg-slate-100">
+    <h1 class="font-bold text-3xl pb-8 text-center">Registration Form</h1>
+
+    <form
+      class="flex flex-col bg-white m-4 shadow-2xl rounded-lg overflow-hidden"
+    >
+      <div
+        class="p-8 flex flex-col gap-4"
+        aciton="/myaction.php"
+        name="myForm"
+        onsubmit="return validateForm()"
+        method="post"
+      >
+        <div id="name" class="">
+          <div
+            class="border-gray-300 bg-gray-50 shadow-sm text-sm border rounded-lg flex"
+          >
+            <p class="text-gray-500 px-4 py-2 border-r border-gray-300 w-fit">
+              Name
+            </p>
+            <input
+              type="text"
+              name="fname"
+              class="bg-white px-4 py-2 w-full rounded-r-lg"
+              required
+            />
+          </div>
+          <div
+            class="formerror border-red-500 rounded-md mt-1 text-red-700 p-4 py-1 hidden border bg-red-200"
+          ></div>
+        </div>
+
+        <div id="email">
+          <div
+            class="border-gray-300 bg-gray-50 shadow-sm text-sm border rounded-lg flex"
+          >
+            <p class="text-gray-500 px-4 py-2 border-r border-gray-300 w-fit">
+              Email
+            </p>
+            <input
+              type="email"
+              name="femail"
+              class="bg-white px-4 py-2 w-full rounded-r-lg"
+              required
+            />
+          </div>
+          <div
+            class="formerror border-red-500 rounded-md mt-1 text-red-700 p-4 py-1 hidden border bg-red-200"
+          ></div>
+        </div>
+
+        <div id="grnder">
+          <div
+            class="border-gray-300 bg-gray-50 shadow-sm text-sm border rounded-lg flex"
+          >
+            <p class="text-gray-500 px-4 py-2 border-r border-gray-300 w-fit">
+              Gender
+            </p>
+            <input
+              type="gender"
+              name="fgender"
+              class="bg-white px-4 py-2 w-full rounded-r-lg"
+              required
+            />
+          </div>
+          <div
+            class="formerror border-red-500 rounded-md mt-1 text-red-700 p-4 py-1 hidden border bg-red-200"
+          ></div>
+        </div>
+
+        <div id="skills">
+          <div
+            class="border-gray-300 bg-gray-50 shadow-sm text-sm border rounded-lg flex"
+          >
+            <p class="text-gray-500 px-4 py-2 border-r border-gray-300 w-fit">
+              Skills
+            </p>
+            <input
+              type="skills"
+              name="fskills"
+              class="bg-white px-4 py-2 w-full rounded-r-lg"
+              required
+            />
+          </div>
+          <div
+            class="formerror border-red-500 rounded-md mt-1 text-red-700 p-4 py-1 hidden border bg-red-200"
+          ></div>
+        </div>
+
+        <div id="phone">
+          <div
+            class="border-gray-300 bg-gray-50 shadow-sm text-sm border rounded-lg flex"
+          >
+            <p class="text-gray-500 px-4 py-2 border-r border-gray-300 w-fit">
+              Phone
+            </p>
+            <input
+              type="phone"
+              name="fphone"
+              class="bg-white px-4 py-2 w-full rounded-r-lg"
+              required
+            />
+          </div>
+          <div
+            class="formerror border-red-500 rounded-md mt-1 text-red-700 p-4 py-1 hidden border bg-red-200"
+          ></div>
+        </div>
+
+        <div id="pass">
+          <div
+            class="border-gray-300 bg-gray-50 shadow-sm text-sm border rounded-lg flex"
+          >
+            <p class="text-gray-500 px-4 py-2 border-r border-gray-300 w-fit">
+              Password
+            </p>
+            <input
+              type="password"
+              name="fpass"
+              class="bg-white px-4 py-2 w-full rounded-r-lg"
+              required
+            />
+          </div>
+          <div
+            class="formerror border-red-500 rounded-md mt-1 text-red-700 p-4 py-1 hidden border bg-red-200"
+          ></div>
+        </div>
+
+        <div id="cpass">
+          <div
+            class="border-gray-300 bg-gray-50 shadow-sm text-sm border rounded-lg flex"
+          >
+            <p class="text-gray-500 px-4 py-2 border-r border-gray-300 w-fit">
+              Confirm
+            </p>
+            <input
+              type="password"
+              name="fcpass"
+              class="bg-white px-4 py-2 w-full rounded-r-lg"
+              required
+            />
+          </div>
+          <div
+            class="formerror border-red-500 rounded-md mt-1 text-red-700 p-4 py-1 hidden border bg-red-200"
+          ></div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 w-full p-8 py-4 flex flex-row-reverse gap-4">
+        <button
+          type="reset"
+          class="order-1 rounded-md bg-white text-gray-700 w-min border-gray-300 shadow-md border hover:bg-gray-200 px-4 py-1"
+        >
+          Clear
+        </button>
+        <button
+          type="submit"
+          class="rounded-md bg-blue-600 w-min border-blue-700 shadow-md border hover:bg-blue-700 px-4 py-1 text-white"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
